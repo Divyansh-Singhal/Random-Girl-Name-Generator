@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Girl Name generator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="styesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+</head>
+<body>
+    <section class="container section pt-5 is-fluid">
+        <div class="columns">
+            <div class="column is-1"></div>
+            <div class="column">
+                <h1 class="title has-text-centered">Random Girl Name Generator</h1>
+            </div>
+           </div>
+           
+            <div class="columns is-centered">
+                <div class="column is-8" style="width:auto">
+                    <div class="buttons is-centered">
+                        <button class="button is-medium is-primary" onclick="gensample(5)">5 Girls Name</button>
+                        <button class="button is-medium is-info" onclick="gensample(10)">10 Girls Name</button>
+                        <button class="button is-medium is-success" onclick="gensample(15)">15 Girls Name</button>
+                        <button class="button is-medium is-link is-outlined" onclick="gensample('random')">Random</button>
+                    </div>
+                </div>
+                    <div class="column is-3">
+                        <div class="field has-addons">
+                            <div class="control is-expanded">
+                                <input class="input is-medium" value="10" type="number" id="innum" placeholder="Enter Number">
+                            </div>
+                            <div class="control">
+                                <button class="button is-medium is-primary" onclick="gensample('generate')">Generate</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-2 has-text-centered" style="width: auto;">
+                    <button class="button is-medium is-dark is-outlined" onclick="gensample('all')">Show All</button>
+                    <button class="button is-medium is-dark is-outlined" onclick="downloadFile()">
+                        <span class="material-symbols-outlined">
+                            download
+                            </span>
+                        <span>Download</span>
+                    </button>
+                </div>
+            </div>
+                <div class="field has-text-centered">
+                     <label class="checkbox mb-2 mr-2">
+                        <input type="checkbox" id="iswithlastname" onchange="gensample('generate')">
+                        <span class="ml-2">Generate with last name</span>
+                     </label>
+                     <label class="checkbox mb-2 mr-2">
+                        <input type="checkbox" id="isascend" onchange="ascorder()">
+                        <span class="ml-2">Display in ascending order</span>
+                     </label>
+                </div>
+                <div class="columns is-multiline is-centered" id="namesectionarea">
+                    
+                    
+                </div>
+                <div class="notification is-link is-light title is-3 has-text-centered mt-5">
+                    <div class="notification is-link is-light title is-3 has-text-centered mt-5">
+                         <span id="generatatedNames">Showing </span> 
+                         <span>Girl Names</span>
+                     </div>
+                </div>
+            </div>
+            <textarea id="outtext" style="display:none" placeholder="text"></textarea>
+            
+    </section>
+    <script src="script.js"></script>
+    
+</body>
+</html>
